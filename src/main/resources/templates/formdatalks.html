@@ -11,38 +11,34 @@
             padding: 0;
             background-color: #f4f4f4;
         }
-        header {
-            background-color: #00391c;
+        .navbar {
+            background-color: #213227;
             color: white;
             padding: 15px 10px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin-bottom: 10px; 
         }
-        header img {
+        .navbar img {
             height: 50px;
+            padding-left: 20px;
         }
-        nav {
+        .navbar nav {
             display: flex;
             align-items: center;
         }
-        nav a {
+        .profile-photo {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+        .navbar a {
             color: white;
             text-decoration: none;
-            margin: 0 15px;
-        }
-        .login-btn {
-            background-color: #3498db;
-            border: none;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 0 15px;
-            cursor: pointer;
-            border-radius: 4px;
+            padding-right: 20px;
+            margin-right: 20px;
         }
         .container {
             padding: 20px;
@@ -78,22 +74,21 @@
     </style>
 </head>
 <body>
-
-<header>
-    <div>
-        <img src="image/logo_kota.png" alt="Logo">
-    </div>
-    <nav>
-        <a href="#">Beranda</a>
-        <div class="dropdown">
-            <a href="#">Profile</a>
-            <div class="dropdown-content">
-                <!-- Tambahkan tautan dropdown di sini jika ada -->
-            </div>
+    <nav class="navbar">
+        <div>
+            <img src="image/logo_kota.png" alt="Logo">
         </div>
-        <a href="login.html" class="login-btn">Log In</a>
+        <div>
+            <a href="homepage.html">Beranda</a>
+            <a href="formdatalks.html">Profile</a>
+            <div class="dropdown-content">
+            </div>
+            <a class="nav-link" href="#">
+                <img src="image/profile.jpg" alt="Profile Photo" class="profile-photo" />
+            </a>
+        </div>
+        
     </nav>
-</header>
 
 <div class="container">
     <h2>PROFILE / FORM DATA LKS</h2>
