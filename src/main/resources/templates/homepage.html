@@ -10,7 +10,11 @@
         background-color: #f8f9fa;
       }
       .navbar {
-        background-color: #213227;
+        background-color: rgba(8, 167, 139, 1);
+      }
+      .card-title {
+        color: rgba(6, 32, 127, 1);
+        font-size: x-large;
       }
       .navbar-brand img {
         width: 50px;
@@ -22,7 +26,7 @@
         object-fit: cover;
       }
       .header {
-        background-color: #004b23;
+        background-color: rgba(87, 92, 91, 0.5);
         color: white;
         padding: 1rem;
       }
@@ -38,6 +42,23 @@
       .info-terkini .card {
         margin-bottom: 1rem;
       }
+      .btn {
+        color: white;
+      }
+      .navbar .btn-icon {
+        color: white;
+        border: none;
+        font-size: 1.5rem;
+      }
+      .img-fluid {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 1rem;
+        width: 90%;
+      }
+      .konten-utama {
+        background-color: rgba(87, 92, 91, 0.5);
+      }
     </style>
   </head>
   <body>
@@ -51,38 +72,65 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
+            <li class="nav-item pt-1">
               <a class="nav-link active" aria-current="page" href="homepage.html">Beranda</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="formdatalks.html">Profile</a>
+            <li class="nav-item pt-1">
+              <div class="dropdown">
+                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Profile</button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Profile LKS</a></li>
+                  <li><a class="dropdown-item" href="formdatalks.html">Form Data LKS</a></li>
+                  <li><a class="dropdown-item" href="#">Form Upload Laporan</a></li>
+                </ul>
+              </div>
             </li>
-            <li class="nav-item">
+            <li class="nav-item pt-1">
+              <div class="dropdown">
+                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Log In</button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Login Admin</a></li>
+                  <li><a class="dropdown-item" href="#">Login Lks</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item ml-2">
+              <button class="btn btn-icon">
+                <i class="bi bi-bell"></i>
+              </button>
+            </li>
+            <li class="nav-item ml-2">
               <a class="nav-link" href="#">
                 <img src="image/profile.jpg" alt="Profile Photo" class="profile-photo" />
-                <!-- Replace with your profile photo path -->
               </a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-
-    <div class="header text-center">
-      <h1>Selamat Datang di Website Resmi</h1>
-      <h2>LEMBAGA KESEJAHTERAAN SOSIAL KOTA YOGYAKARTA</h2>
-      <p>
-        Lembaga Kesejahteraan Sosial (LKS) adalah organisasi sosial atau perkumpulan sosial melaksanakan penyelenggaraan kesejahteraan sosial yang dibentuk oleh masyarakat. Tujuan pendirian LKS sebagai wujud peran masyarakat dalam
-        penyelenggaraan kesejahteraan sosial.
-      </p>
+    <div class="card m-3 konten-utama">
+      <div class="row g-0">
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Selamat Datang di Website Resmi LEMBAGA KESEJAHTERAAN SOSIAL KOTA YOGYAKARTA</h5>
+            <p class="card-text">
+              Lembaga Kesejahteraan Sosial (LKS) adalah organisasi sosial atau perkumpulan sosial melaksanakan <br />penyelenggaraan kesejahteraan sosial yang dibentuk oleh masyarakat. <br />Tujuan pendirian LKS sebagai wujud peran
+              masyarakat dalam penyelenggaraan kesejahteraan sosial.
+            </p>
+            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <img src="image/image1.png" class="img-fluid rounded-start" alt="..." />
+        </div>
+      </div>
     </div>
-
     <div class="container main-content mt-4">
       <h3>Info Terkini</h3>
       <div class="row info-terkini">
         <div class="col-md-4">
           <div class="card">
-            <img src="image1.jpg" class="card-img-top" alt="Image 1" />
+            <img src="image/image2.png" class="card-img-top" alt="Image 1" />
             <div class="card-body">
               <p class="card-text"><small class="text-muted">Senin 17/06/2024 13:34 WIB</small></p>
               <p class="card-text">Meneladani Ketakwaan dan Semangat Berqurban Idul Adha...</p>
@@ -91,7 +139,7 @@
         </div>
         <div class="col-md-4">
           <div class="card">
-            <img src="image2.jpg" class="card-img-top" alt="Image 2" />
+            <img src="image/image3.png" class="card-img-top" alt="Image 2" />
             <div class="card-body">
               <p class="card-text"><small class="text-muted">Jumat 14/06/2024 15:41 WIB</small></p>
               <p class="card-text">Rakornas Pengendalian Inflasi Jaga Stabilitas Harga Wujudkan...</p>
@@ -100,7 +148,7 @@
         </div>
         <div class="col-md-4">
           <div class="card">
-            <img src="image3.jpg" class="card-img-top" alt="Image 3" />
+            <img src="image/image4.png" class="card-img-top" alt="Image 3" />
             <div class="card-body">
               <p class="card-text"><small class="text-muted">Minggu 16/06/2024 19:20 WIB</small></p>
               <p class="card-text">Beri Rasa Aman Pemkot Yogya Terjunkan 166 Petugas...</p>
@@ -109,7 +157,6 @@
         </div>
       </div>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   </body>
 </html>
