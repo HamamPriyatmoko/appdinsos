@@ -12,21 +12,15 @@
             background-color: #f4f4f4;
         }
         .navbar {
-            background-color: #213227;
+            background-color: rgba(8, 167, 139, 1);
+        }
+        .navbar-brand img {
+            width: 50px;
+        }
+        .navbar .btn-icon {
             color: white;
-            padding: 15px 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 10px; 
-        }
-        .navbar img {
-            height: 50px;
-            padding-left: 20px;
-        }
-        .navbar nav {
-            display: flex;
-            align-items: center;
+            border: none;
+            font-size: 1.5rem;
         }
         .profile-photo {
             width: 40px;
@@ -40,6 +34,9 @@
             padding-right: 20px;
             margin-right: 20px;
         }
+        .dropdown-menu a {
+            color: black !important;
+        }
         .container {
             padding: 20px;
         }
@@ -48,7 +45,7 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             padding: 20px;
-            margin-top: 20px;
+            margin-top: 10px;
         }
         .section-title {
             font-size: 1.5em;
@@ -69,56 +66,67 @@
             border: 1px solid #ccc;
             border-radius: 4px;
         }
-        .form-group input:disabled {
-            background-color: #e9ecef;
-        }
-        h2 {
-            font-weight: normal; /* This line makes the h2 not bold */
-            font-size: 1.2em; /* This line makes the h2 smaller */
-        }
         .button-group {
             display: flex;
             justify-content: space-between;
             margin-top: 20px;
         }
         .button-group button {
-            padding: 10px 20px;
+            padding: 10px 70px;
             border: none;
             border-radius: 4px;
             cursor: pointer;
-            bottom: 20px;
+            font-size: 16px;
         }
-        .button-group .save-btn {
-            background-color: #4CAF50;
+        .button-group .save-btn, .button-group .cancel-btn {
+            background-color: #08A78B;
             color: white;
-            right: 20px;
-        }
-        .button-group .cancel-btn {
-            background-color: #f44336;
-            color: white;
-            left: 20px;
         }
     </style>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar">
-        <div>
-            <img src="image/logo_kota.png" alt="Logo">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="image/logo_kota.png" alt="Logo" />
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item pt-1">
+                <a class="nav-link active" aria-current="page" href="homepage.html">Home</a>
+              </li>
+              <li class="nav-item pt-1 dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-toggle="dropdown" aria-expanded="false">Profile</a>
+                <div class="dropdown-menu" aria-labelledby="profileDropdown">
+                  <a class="dropdown-item" href="profile.html">Profile LKS</a>
+                  <a class="dropdown-item" href="formdatalks.html">Form Data LKS</a>
+                  <a class="dropdown-item" href="uploadlaporan.html">Form Upload Laporan</a>
+                </div>
+              </li>
+              <li class="nav-item pt-1 dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="loginDropdown" role="button" data-toggle="dropdown" aria-expanded="false">Log In</a>
+                <div class="dropdown-menu" aria-labelledby="loginDropdown">
+                  <a class="dropdown-item" href="#">Login Admin</a>
+                  <a class="dropdown-item" href="#">Login Lks</a>
+                </div>
+              </li>
+              <li class="nav-item ml-2">
+                <a class="nav-link" href="#">
+                  <img src="image/notif.png" alt="Profile Photo" class="profile-photo" />
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div>
-            <a href="homepage.html">Beranda</a>
-            <a href="formdatalks.html">Profile</a>
-            <div class="dropdown-content">
-            </div>
-            <a class="nav-link" href="#">
-                <img src="image/profile.jpg" alt="Profile Photo" class="profile-photo" />
-            </a>
-        </div>
-        
-    </nav>
+      </nav>
 
 <div class="container">
-    <h2>PROFILE / EDIT PROFILE</h2>
+    <h2 style="font-size: 1em;">PROFILE / EDIT PROFILE</h2>
     <div class="card">
         <div class="section">
             <div class="section-title"><strong>EDIT PROFILE</strong></div>
@@ -177,6 +185,11 @@
         </div>
     </div>
 </div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 </html>
