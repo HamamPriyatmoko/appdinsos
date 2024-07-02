@@ -33,7 +33,7 @@
             height: 40px;
             border-radius: 50%;
             object-fit: cover;
-          }
+        }
         .navbar a {
             color: white;
             text-decoration: none;
@@ -56,20 +56,47 @@
         }
         .form-group {
             margin-bottom: 15px;
+            display: flex;
+            align-items: center;
         }
         .form-group label {
-            display: block;
             font-weight: bold;
+            width: 300px; 
         }
-        .form-group input {
-            width: 100%;
+        .form-group input, .form-group select {
+            flex: 1;
             padding: 8px;
-            margin-top: 5px;
             border: 1px solid #ccc;
             border-radius: 4px;
         }
         .form-group input:disabled {
             background-color: #e9ecef;
+        }
+        h2 {
+            font-weight: normal; /* This line makes the h2 not bold */
+            font-size: 1.2em; /* This line makes the h2 smaller */
+        }
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .button-group button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            bottom: 20px;
+        }
+        .button-group .save-btn {
+            background-color: #4CAF50;
+            color: white;
+            right: 20px;
+        }
+        .button-group .cancel-btn {
+            background-color: #f44336;
+            color: white;
+            left: 20px;
         }
     </style>
 </head>
@@ -91,45 +118,61 @@
     </nav>
 
 <div class="container">
-    <h2>PROFILE / FORM DATA LKS</h2>
+    <h2>PROFILE / EDIT PROFILE</h2>
     <div class="card">
-        
         <div class="section">
-            <div class="section-title">Data Umum</div>
+            <div class="section-title"><strong>EDIT PROFILE</strong></div>
             <div class="form-group">
-                <label for="nama-panti">Nama Panti Sosial</label>
-                <input type="text" id="nama-panti" disabled>
+                <label for="upload-Foto">Upload Foto</label>
+                <input type="text" id="upload-Foto">
             </div>
             <div class="form-group">
-                <label for="pemilik-panti">Pemilik Panti Sosial</label>
-                <input type="text" id="pemilik-panti" disabled>
+                <label for="nama-lks">Nama LKS</label>
+                <input type="text" id="nama-lks">
             </div>
             <div class="form-group">
-                <label for="alamat-panti">Alamat Panti Sosial</label>
-                <input type="text" id="alamat-panti" disabled>
+                <label for="pemilik-lks">Pemilik LKS</label>
+                <input type="text" id="pemilik-lks">
+            </div>
+            <div class="form-group">
+                <label for="alamat-lks">Alamat LKS</label>
+                <input type="text" id="alamat-lks">
             </div>
             <div class="form-group">
                 <label for="akte-notaris">Nomor & Tanggal Akte Notaris</label>
-                <input type="text" id="akte-notaris" disabled>
+                <input type="text" id="akte-notaris">
             </div>
             <div class="form-group">
-                <label for="kapasitas">Kapasitas</label>
-                <input type="text" id="kapasitas" disabled>
-            </div>
-        </div>
-        <div class="section">
-            <div class="section-title">Penyelenggaraan</div>
-            <div class="form-group">
-                <label for="kebersihan">Kebersihan</label>
-                <input type="text" id="kebersihan" disabled>
+                <label for="tanda-daftar">Nomor & Tanggal Tanda Daftar</label>
+                <input type="text" id="tanda-daftar">
             </div>
             <div class="form-group">
-                <label for="halaman">Halaman</label>
-                <input type="text" id="halaman" disabled>
+                <label for="kontak-pengurus">Kontak Pengurus</label>
+                <input type="text" id="kontak-pengurus">
             </div>
             <div class="form-group">
-                <label for="makanan">Makanan</label>
-                <input type="text" id="makanan" disabled>
+                <label for="akreditasi">Akreditasi</label>
+                <input type="text" id="akreditasi">
+            </div>
+            <div class="form-group">
+                <label for="jenis-lks">Jenis LKS</label>
+                <select id="jenis-lks">
+                    <option value="kota">LKS Kota</option>
+                    <option value="provinsi">LKS Provinsi</option>
+                    <option value="nasional">LKS Nasional</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="jenis-pelayanan">Jenis Pelayanan</label>
+                <select id="jenis-pelayanan">
+                    <option value="anak">Anak</option>
+                    <option value="disabilitas">Disabilitas</option>
+                    <option value="lanjut-usia">Lanjut Usia</option>
+                </select>
+            </div>
+            <div class="button-group">
+                <button class="cancel-btn">Batal</button>
+                <button class="save-btn">Simpan</button>
             </div>
         </div>
     </div>
