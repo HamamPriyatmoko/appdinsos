@@ -1,134 +1,139 @@
 <!DOCTYPE html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Data LKS</title>
     <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f4f4;
-      }
-      .navbar {
-        background-color: #213227;
-        color: white;
-        padding: 15px 10px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 10px;
-      }
-      .navbar img {
-        height: 50px;
-        padding-left: 20px;
-      }
-      .navbar nav {
-        display: flex;
-        align-items: center;
-      }
-      .profile-photo {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        object-fit: cover;
-      }
-      .navbar a {
-        color: white;
-        text-decoration: none;
-        padding-right: 20px;
-        margin-right: 20px;
-      }
-      .container {
-        padding: 20px;
-      }
-      .card {
-        background-color: white;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        padding: 20px;
-        margin-top: 20px;
-      }
-      .section-title {
-        font-size: 1.5em;
-        margin-bottom: 10px;
-      }
-      .form-group {
-        margin-bottom: 15px;
-      }
-      .form-group label {
-        display: block;
-        font-weight: bold;
-      }
-      .form-group input {
-        width: 100%;
-        padding: 8px;
-        margin-top: 5px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-      }
-      .form-group input:disabled {
-        background-color: #e9ecef;
-      }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            background-color: #213227;
+            color: white;
+            padding: 15px 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px; 
+        }
+        .navbar img {
+            height: 50px;
+            padding-left: 20px;
+        }
+        .navbar nav {
+            display: flex;
+            align-items: center;
+        }
+        .profile-photo {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding-right: 20px;
+            margin-right: 20px;
+        }
+        .container {
+            padding: 20px;
+        }
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .section-title {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-group input:disabled {
+            background-color: #e9ecef;
+        }
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <nav class="navbar">
-      <div>
-        <img src="image/logo_kota.png" alt="Logo" />
-      </div>
-      <div>
-        <a href="homepage.html">Beranda</a>
-        <a href="formdatalks.html">Profile</a>
-        <div class="dropdown-content"></div>
-        <a class="nav-link" href="#">
-          <img src="image/profile.jpg" alt="Profile Photo" class="profile-photo" />
-        </a>
-      </div>
+        <div>
+            <img src="image/logo_kota.png" alt="Logo">
+        </div>
+        <div>
+            <a href="homepage.html">Beranda</a>
+            <a href="formdatalks.html">Profile</a>
+            <div class="dropdown-content">
+            </div>
+            <a class="nav-link" href="#">
+                <img src="image/profile.jpg" alt="Profile Photo" class="profile-photo" />
+            </a>
+        </div>
+        
     </nav>
-    <div class="container">
-      <h2>PROFILE / FORM DATA LKS</h2>
-      <div class="card">
+
+<div class="container">
+    <h2>PROFILE / FORM DATA LKS</h2>
+    <div class="card">
+        
         <div class="section">
-          <div class="section-title">Data Umum</div>
-          <div class="form-group">
-            <label for="nama-panti">Nama Panti Sosial</label>
-            <input type="text" id="nama-panti" disabled />
-          </div>
-          <div class="form-group">
-            <label for="pemilik-panti">Pemilik Panti Sosial</label>
-            <input type="text" id="pemilik-panti" disabled />
-          </div>
-          <div class="form-group">
-            <label for="alamat-panti">Alamat Panti Sosial</label>
-            <input type="text" id="alamat-panti" disabled />
-          </div>
-          <div class="form-group">
-            <label for="akte-notaris">Nomor & Tanggal Akte Notaris</label>
-            <input type="text" id="akte-notaris" disabled />
-          </div>
-          <div class="form-group">
-            <label for="kapasitas">Kapasitas</label>
-            <input type="text" id="kapasitas" disabled />
-          </div>
+            <div class="section-title">Data Umum</div>
+            <div class="form-group">
+                <label for="nama-panti">Nama Panti Sosial</label>
+                <input type="text" id="nama-panti" disabled>
+            </div>
+            <div class="form-group">
+                <label for="pemilik-panti">Pemilik Panti Sosial</label>
+                <input type="text" id="pemilik-panti" disabled>
+            </div>
+            <div class="form-group">
+                <label for="alamat-panti">Alamat Panti Sosial</label>
+                <input type="text" id="alamat-panti" disabled>
+            </div>
+            <div class="form-group">
+                <label for="akte-notaris">Nomor & Tanggal Akte Notaris</label>
+                <input type="text" id="akte-notaris" disabled>
+            </div>
+            <div class="form-group">
+                <label for="kapasitas">Kapasitas</label>
+                <input type="text" id="kapasitas" disabled>
+            </div>
         </div>
         <div class="section">
-          <div class="section-title">Penyelenggaraan</div>
-          <div class="form-group">
-            <label for="kebersihan">Kebersihan</label>
-            <input type="text" id="kebersihan" disabled />
-          </div>
-          <div class="form-group">
-            <label for="halaman">Halaman</label>
-            <input type="text" id="halaman" disabled />
-          </div>
-          <div class="form-group">
-            <label for="makanan">Makanan</label>
-            <input type="text" id="makanan" disabled />
-          </div>
+            <div class="section-title">Penyelenggaraan</div>
+            <div class="form-group">
+                <label for="kebersihan">Kebersihan</label>
+                <input type="text" id="kebersihan" disabled>
+            </div>
+            <div class="form-group">
+                <label for="halaman">Halaman</label>
+                <input type="text" id="halaman" disabled>
+            </div>
+            <div class="form-group">
+                <label for="makanan">Makanan</label>
+                <input type="text" id="makanan" disabled>
+            </div>
         </div>
-      </div>
     </div>
-  </body>
+</div>
+
+</body>
 </html>
