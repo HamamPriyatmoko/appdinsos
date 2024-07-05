@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Management User</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        .header {
+            background-color: #4caf50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header nav {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+        }
+        .header img {
+            height: 50px;
+        }
+        .header a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        .header .user-profile {
+            display: flex;
+            align-items: center;
+        }
+        .header .user-profile img {
+            border-radius: 50%;
+            height: 40px;
+            margin-left: 10px;
+        }
+        .container {
+            padding: 20px;
+        }
+        .search-container {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .search-container label {
+            margin-right: 0px;
+        }
+        .search-container input[type="text"] {
+            padding: 10px;
+            width: 200px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .table-container {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table th, table td {
+            padding: 15px;
+            text-align: left;
+        }
+        table th {
+            background-color: #f2f2f2;
+        }
+        table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        table tr:hover {
+            background-color: #f1f1f1;
+        }
+        .operations {
+            display: flex;
+            gap: 10px;
+        }
+        .operations img {
+            cursor: pointer;
+            height: 20px;
+            padding-right: 20px;
+            padding-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="image/logo_kota.png" alt="Logo">
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">History</a>
+            <a href="#">Management</a>
+            <div class="user-profile">
+                <span>Ragil</span>
+            </div>
+        </nav>
+        
+    </div>
+    <div class="container">
+        <div class="table-container">
+            <h2>Data LKS</h2>
+            <label for="search">Search name</label>
+            <div class="search-container">
+                <input type="text" placeholder="Search name">
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Operations</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Panti Wreda "Hanna" Yogyakarta</td>
+                        <td class="operations">
+                            <img src="image/edit-icon.jpg" alt="Edit">
+                            <img src="image/delete-icon.jpg" alt="Delete">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Panti Wreda "Pandu" Yogyakarta</td>
+                        <td class="operations">
+                            <img src="image/edit-icon.jpg" alt="Edit">
+                            <img src="image/delete-icon.jpg" alt="Delete">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Panti Wreda "Mulya" Yogyakarta</td>
+                        <td class="operations">
+                            <img src="image/edit-icon.jpg" alt="Edit">
+                            <img src="image/delete-icon.jpg" alt="Delete">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Panti Wreda "Dharma" Yogyakarta</td>
+                        <td class="operations">
+                            <img src="image/edit-icon.jpg" alt="Edit">
+                            <img src="image/delete-icon.jpg" alt="Delete">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
