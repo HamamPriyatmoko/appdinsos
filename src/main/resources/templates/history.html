@@ -10,10 +10,10 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f5f5f5;
+            background-color: #f2f2f2;
         }
         nav {
-            background-color: #009688;
+            background-color: rgba(8, 167, 139, 1);
             padding: 10px;
             display: flex;
             justify-content: space-between;
@@ -60,36 +60,52 @@
         .history-header {
             font-size: 24px;
             margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .search-label {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: block;
+            margin-right: 10px;
+        }
+        .search-bar-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
         }
         .search-bar {
-            margin-bottom: 20px;
             display: flex;
-            justify-content: center;
+            align-items: center;
         }
         .search-bar input {
-            width: 50%;
+            width: 300px;
             padding: 10px;
             font-size: 16px;
             border-radius: 5px;
             border: 1px solid #ddd;
+        }
+        .search-bar img {
+            height: 25px;
+            margin-left: -35px;
+            cursor: pointer;
         }
         table {
             width: 100%;
             border-collapse: collapse;
         }
         table th, table td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: center;
+            padding: 15px;
+            text-align: left;
         }
         table th {
-            background-color: #e0f7fa;
+            background-color: #f2f2f2;
         }
-        table tbody tr:nth-child(odd) {
+        table tr:nth-child(even) {
             background-color: #f9f9f9;
         }
-        table tbody tr:nth-child(even) {
-            background-color: #ffffff;
+        table tr:hover {
+            background-color: #f1f1f1;
         }
         .actions {
             display: flex;
@@ -132,7 +148,7 @@
                 <li class="nav-item pt-1">
                     <div class="profile-container">
                         <span class="navbar-text">Ragil</span>
-                        <img src="image/user-icon.png" alt="Ikon Pengguna" class="profile-photo">
+                        <img src="image/profile-icon.jpg" alt="Ikon Pengguna" class="profile-photo">
                     </div>
                 </li>
             </ul>
@@ -142,8 +158,12 @@
 
 <div class="container">
     <div class="history-header">History</div>
-    <div class="search-bar">
-        <input type="text" placeholder="Search name">
+    <div class="search-bar-container">
+        <label class="search-label" for="searchInput">Search name</label>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="">
+            <img src="image/search.jpg" alt="Search Icon">
+        </div>
     </div>
     <table>
         <thead>
@@ -161,10 +181,10 @@
                 <td>2023-07-12 13:21</td>
                 <td class="actions">
                     <button onclick="editEntry(this)">
-                        <img src="image/edit-icon.png" alt="Edit">
+                        <img src="image/edit-icon.jpg" alt="Edit">
                     </button>
                     <button onclick="deleteEntry(this)">
-                        <img src="image/delete-icon.png" alt="Hapus">
+                        <img src="image/delete-icon.jpg" alt="Hapus">
                     </button>
                 </td>
             </tr>
@@ -174,10 +194,10 @@
                 <td>2023-07-12 13:21</td>
                 <td class="actions">
                     <button onclick="editEntry(this)">
-                        <img src="image/edit-icon.png" alt="Edit">
+                        <img src="image/edit-icon.jpg" alt="Edit">
                     </button>
                     <button onclick="deleteEntry(this)">
-                        <img src="image/delete-icon.png" alt="Hapus">
+                        <img src="image/delete-icon.jpg" alt="Hapus">
                     </button>
                 </td>
             </tr>
@@ -187,10 +207,10 @@
                 <td>2023-07-12 13:21</td>
                 <td class="actions">
                     <button onclick="editEntry(this)">
-                        <img src="image/edit-icon.png" alt="Edit">
+                        <img src="image/edit-icon.jpg" alt="Edit">
                     </button>
                     <button onclick="deleteEntry(this)">
-                        <img src="image/delete-icon.png" alt="Hapus">
+                        <img src="image/delete-icon.jpg" alt="Hapus">
                     </button>
                 </td>
             </tr>
@@ -200,10 +220,10 @@
                 <td>2023-07-12 13:21</td>
                 <td class="actions">
                     <button onclick="editEntry(this)">
-                        <img src="image/edit-icon.png" alt="Edit">
+                        <img src="image/edit-icon.jpg" alt="Edit">
                     </button>
                     <button onclick="deleteEntry(this)">
-                        <img src="image/delete-icon.png" alt="Hapus">
+                        <img src="image/delete-icon.jpg" alt="Hapus">
                     </button>
                 </td>
             </tr>
