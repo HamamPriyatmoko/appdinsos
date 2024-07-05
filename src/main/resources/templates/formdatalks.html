@@ -1,134 +1,188 @@
 <!DOCTYPE html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Data LKS</title>
     <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f4f4;
-      }
-      .navbar {
-        background-color: #213227;
-        color: white;
-        padding: 15px 10px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 10px;
-      }
-      .navbar img {
-        height: 50px;
-        padding-left: 20px;
-      }
-      .navbar nav {
-        display: flex;
-        align-items: center;
-      }
-      .profile-photo {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        object-fit: cover;
-      }
-      .navbar a {
-        color: white;
-        text-decoration: none;
-        padding-right: 20px;
-        margin-right: 20px;
-      }
-      .container {
-        padding: 20px;
-      }
-      .card {
-        background-color: white;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        padding: 20px;
-        margin-top: 20px;
-      }
-      .section-title {
-        font-size: 1.5em;
-        margin-bottom: 10px;
-      }
-      .form-group {
-        margin-bottom: 15px;
-      }
-      .form-group label {
-        display: block;
-        font-weight: bold;
-      }
-      .form-group input {
-        width: 100%;
-        padding: 8px;
-        margin-top: 5px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-      }
-      .form-group input:disabled {
-        background-color: #e9ecef;
-      }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            background-color: rgba(8, 167, 139, 1);
+        }
+        .navbar-brand img {
+            width: 50px;
+        }
+        .navbar .btn-icon {
+            color: white;
+            border: none;
+            font-size: 1.5rem;
+        }
+        .profile-photo {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding-right: 20px;
+            margin-right: 20px;
+        }
+        .dropdown-menu a {
+            color: black !important;
+        }
+        .container {
+            padding: 20px;
+        }
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-top: 10px;
+        }
+        .section-title {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .form-group label {
+            font-weight: bold;
+            width: 300px; 
+        }
+        .form-group input, .form-group select {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .button-group button {
+            padding: 10px 70px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .button-group .save-btn, .button-group .cancel-btn {
+            background-color: #08A78B;
+            color: white;
+        }
     </style>
-  </head>
-  <body>
-    <nav class="navbar">
-      <div>
-        <img src="image/logo_kota.png" alt="Logo" />
-      </div>
-      <div>
-        <a href="homepage.html">Beranda</a>
-        <a href="formdatalks.html">Profile</a>
-        <div class="dropdown-content"></div>
-        <a class="nav-link" href="#">
-          <img src="image/profile.jpg" alt="Profile Photo" class="profile-photo" />
-        </a>
-      </div>
-    </nav>
-    <div class="container">
-      <h2>PROFILE / FORM DATA LKS</h2>
-      <div class="card">
-        <div class="section">
-          <div class="section-title">Data Umum</div>
-          <div class="form-group">
-            <label for="nama-panti">Nama Panti Sosial</label>
-            <input type="text" id="nama-panti" disabled />
-          </div>
-          <div class="form-group">
-            <label for="pemilik-panti">Pemilik Panti Sosial</label>
-            <input type="text" id="pemilik-panti" disabled />
-          </div>
-          <div class="form-group">
-            <label for="alamat-panti">Alamat Panti Sosial</label>
-            <input type="text" id="alamat-panti" disabled />
-          </div>
-          <div class="form-group">
-            <label for="akte-notaris">Nomor & Tanggal Akte Notaris</label>
-            <input type="text" id="akte-notaris" disabled />
-          </div>
-          <div class="form-group">
-            <label for="kapasitas">Kapasitas</label>
-            <input type="text" id="kapasitas" disabled />
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="image/logo_kota.png" alt="Logo" />
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item pt-1">
+                <a class="nav-link active" aria-current="page" href="homepage.html">Home</a>
+              </li>
+              <li class="nav-item pt-1 dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-toggle="dropdown" aria-expanded="false">Profile</a>
+                <div class="dropdown-menu" aria-labelledby="profileDropdown">
+                  <a class="dropdown-item" href="profile.html">Profile LKS</a>
+                  <a class="dropdown-item" href="formdatalks.html">Form Data LKS</a>
+                  <a class="dropdown-item" href="uploadlaporan.html">Form Upload Laporan</a>
+                </div>
+              </li>
+              <li class="nav-item ml-2">
+                <a class="nav-link" href="#">
+                  <img src="image/notif.png" alt="Profile Photo" class="profile-photo" />
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
+      </nav>
+
+<div class="container">
+    <h2 style="font-size: 1em;">PROFILE / EDIT PROFILE</h2>
+    <div class="card">
         <div class="section">
-          <div class="section-title">Penyelenggaraan</div>
-          <div class="form-group">
-            <label for="kebersihan">Kebersihan</label>
-            <input type="text" id="kebersihan" disabled />
-          </div>
-          <div class="form-group">
-            <label for="halaman">Halaman</label>
-            <input type="text" id="halaman" disabled />
-          </div>
-          <div class="form-group">
-            <label for="makanan">Makanan</label>
-            <input type="text" id="makanan" disabled />
-          </div>
+            <div class="section-title"><strong>EDIT PROFILE</strong></div>
+            <div class="form-group">
+                <label for="upload-Foto">Upload Foto</label>
+                <input type="file" id="upload-Foto">
+            </div>
+            <div class="form-group">
+                <label for="nama-lks">Nama LKS</label>
+                <input type="text" id="nama-lks">
+            </div>
+            <div class="form-group">
+                <label for="pemilik-lks">Pemilik LKS</label>
+                <input type="text" id="pemilik-lks">
+            </div>
+            <div class="form-group">
+                <label for="alamat-lks">Alamat LKS</label>
+                <input type="text" id="alamat-lks">
+            </div>
+            <div class="form-group">
+                <label for="akte-notaris">Nomor & Tanggal Akte Notaris</label>
+                <input type="text" id="akte-notaris">
+            </div>
+            <div class="form-group">
+                <label for="tanda-daftar">Nomor & Tanggal Tanda Daftar</label>
+                <input type="text" id="tanda-daftar">
+            </div>
+            <div class="form-group">
+                <label for="kontak-pengurus">Kontak Pengurus</label>
+                <input type="text" id="kontak-pengurus">
+            </div>
+            <div class="form-group">
+                <label for="akreditasi">Akreditasi</label>
+                <input type="text" id="akreditasi">
+            </div>
+            <div class="form-group">
+                <label for="jenis-lks">Jenis LKS</label>
+                <select id="jenis-lks">
+                    <option value="kota">LKS Kota</option>
+                    <option value="provinsi">LKS Provinsi</option>
+                    <option value="nasional">LKS Nasional</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="jenis-pelayanan">Jenis Pelayanan</label>
+                <select id="jenis-pelayanan">
+                    <option value="anak">Anak</option>
+                    <option value="disabilitas">Disabilitas</option>
+                    <option value="lanjut-usia">Lanjut Usia</option>
+                </select>
+            </div>
+            <div class="button-group">
+                <button class="cancel-btn">Batal</button>
+                <button class="save-btn">Simpan</button>
+            </div>
         </div>
-      </div>
     </div>
-  </body>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
 </html>
