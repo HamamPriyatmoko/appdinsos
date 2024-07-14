@@ -12,7 +12,7 @@
             background-color: #f2f2f2;
         }
         .header {
-            background-color: #4caf50;
+            background-color: rgba(8, 167, 139, 1);
             color: white;
             padding: 15px;
             text-align: center;
@@ -36,29 +36,59 @@
         .header .user-profile {
             display: flex;
             align-items: center;
+            background-color: white;
+            border-radius: 5%;
+            padding: 3px;
+            width: 70px;
+            height: 30px;
+            margin: 0 auto;
+            margin-left: 10px;
         }
         .header .user-profile img {
-            border-radius: 50%;
-            height: 40px;
-            margin-left: 10px;
+            border-radius: 100%;
+            height: 22px;
+            width: 22px;
+            margin-left: 5px;
+        }
+        h1{
+            padding-left: 25px;
+            font-size: 15px;
+            font-weight: lighter;
+            padding-top: 25px;
+        }
+        h2{
+            font-weight: bold;
         }
         .container {
             padding: 20px;
         }
-        .search-container {
+        .search-label {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: block;
+            margin-right: 10px;
+        }
+        .search-bar-container {
+            display: flex;
+            align-items: center;
             margin-bottom: 20px;
+        }
+        .search-bar {
             display: flex;
             align-items: center;
         }
-        .search-container label {
-            margin-right: 0px;
-        }
-        .search-container input[type="text"] {
+        .search-bar input {
+            width: 300px;
             padding: 10px;
-            width: 200px;
-            margin-right: 10px;
-            border: 1px solid #ccc;
+            font-size: 16px;
             border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        .search-bar img {
+            height: 25px;
+            margin-left: -35px;
+            cursor: pointer;
         }
         .table-container {
             background-color: white;
@@ -75,10 +105,10 @@
             text-align: left;
         }
         table th {
-            background-color: #f2f2f2;
+            background-color: rgba(8, 167, 139, 0.1);
         }
         table tr:nth-child(even) {
-            background-color: #f9f9f9;
+            background-color: rgba(8, 167, 139, 0.1);
         }
         table tr:hover {
             background-color: #f1f1f1;
@@ -103,17 +133,21 @@
             <a href="#">History</a>
             <a href="#">Management</a>
             <div class="user-profile">
-                <span>Ragil</span>
+                <span style="color: black; margin-left: 3px;">Ragil</span>
+                <img src="image/profile-icon.jpg" alt="Edit">
             </div>
         </nav>
-        
     </div>
+    <h1>MANAGEMENT USER</h1>
     <div class="container">
         <div class="table-container">
             <h2>Data LKS</h2>
-            <label for="search">Search name</label>
-            <div class="search-container">
-                <input type="text" placeholder="Search name">
+            <div class="search-bar-container">
+                <label class="search-label" for="searchInput">Search name</label>
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="">
+                    <img src="image/search.jpg" alt="Search Icon">
+                </div>
             </div>
             <table>
                 <thead>

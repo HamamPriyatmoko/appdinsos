@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <title>Home (LKS)</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      body {
+        background-color: #f8f9fa;
+        margin-bottom: 200px;
+      }
+      .navbar {
+        background-color: rgba(8, 167, 139, 1);
+      }
+      .card-title {
+        color: rgba(6, 32, 127, 1);
+        font-size: x-large;
+        font-weight: 400;
+      }
+      .navbar-brand img {
+        width: 50px;
+      }
+      .profile-photo {
+        width: 30px;
+        height: 30px;
+        margin-left: 2rem;
+      }
+      .header {
+        background-color: rgba(87, 92, 91, 0.5);
+        color: white;
+        padding: 1rem;
+      }
+      .main-content {
+        background-color: white;
+        padding: 2rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .profile-lks img {
+        width: 100%;
+        height: auto;
+      }
+      .profile-lks .card {
+        margin-bottom: 1rem;
+        padding: 1rem;
+      }
+      .btn {
+        color: white;
+      }
+      .navbar .btn-icon {
+        color: white;
+        border: none;
+        font-size: 1.5rem;
+      }
+      h3 {
+        padding-left: 55px;
+      }    
+      .img-fluid {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 1rem;
+        margin-left: 9rem;
+        width: 90%;
+      }
+      .konten-utama {
+        background-color: rgba(87, 92, 91, 0.5);
+        padding: 2rem; 
+        margin: 1rem 0;
+        max-width: 1300px; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+      }
+      .card-main {
+        color: rgba(6, 32, 127, 1);
+        font-size: xx-large;
+        font-weight: 600;
+      }
+      .card-text {
+        font-size: large;
+      }
+      .notification-panel {
+        position: fixed;
+        top: 0;
+        right: -400px;
+        width: 400px;
+        height: 100%;
+        background-color: white;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+        transition: right 0.3s ease;
+        z-index: 1000;
+      }
+      .notification-panel.show {
+        right: 0;
+      }
+      .notification-header {
+        background-color: rgba(8, 167, 139, 1);
+        color: white;
+        padding: 1rem;
+        text-align: center;
+        position: relative;
+      }
+      .btn-close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        color: white;
+      }
+      .notification-content {
+        padding: 1rem;
+      }
+      .notification-content .card {
+        margin-bottom: 1rem;
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 1rem;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Menambahkan margin bawah untuk memberikan jarak antar card */
+      }
+      .notification-content .card img {
+        width: 30px; /* Mengatur ukuran logo */
+        height: auto;
+      }
+      .notification-card .title {
+        font-size: 1.25rem;
+        font-weight: bold;
+      }
+      footer {
+        background-color: rgba(8, 167, 139, 1);
+        color: white;
+        padding: 1rem;
+        text-align: center;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+      }
+      .footer-content {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .footer-item {
+        display: flex;
+        align-items: center;
+        margin: 0.5rem 1rem;
+      }
+      .footer-item .icon-wrapper {
+        width: 50px;
+        height: 50px;
+        background-color: white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+      }
+      .footer-item img {
+        width: 30px;
+        height: 30px;
+      }
+      .footer-item .text {
+        font-size: 1.1rem;
+      }
+      .footer-item .text strong {
+        display: block;
+        font-size: 1.2rem;
+      }
+      .profile-card {
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 1.5rem;
+        overflow: hidden;
+      }
+      .profile-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+      .profile-card .card-body {
+        text-align: center;
+      }
+      .profile-card .card-body .location-icon {
+        font-size: 1.5rem;
+        color: #000;
+      }
+      .profile-card .card-body .card-title {
+        font-size: 1.25rem;
+        font-weight: bold;
+      }
+      .profile-card .card-body .card-text {
+        font-size: 0.875rem;
+        color: #666;
+      }
+      .profile-card .card-body img{
+        width: 20px;
+        height: 20px;
+      }
+      .profile-card .contact {
+        font-size: 0.875rem;
+        color: #333;
+        margin-top: 1rem;
+        border-top: 1px solid #ddd;
+        padding-top: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="image/logo_kota.png" alt="Logo" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item pt-1">
+              <a class="nav-link active" aria-current="page" href="homepage.html">Home</a>
+            </li>
+            <li class="nav-item pt-1">
+              <div class="dropdown">
+                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Profile</button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="profile.html">Profile LKS</a></li>
+                  <li><a class="dropdown-item" href="formdatalks.html">Form Data LKS</a></li>
+                  <li><a class="dropdown-item" href="uploadlaporan.html">Form Upload Laporan</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item pt-1">
+              <div class="dropdown">
+                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Log In</button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="login_admin.html">Login Admin</a></li>
+                  <li><a class="dropdown-item" href="login.html">Login Lks</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item ml-2">
+              <a class="nav-link" href="#" id="notification-icon">
+                <img src="image/notif.png" alt="Notification Icon" class="profile-photo" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="card m-3 konten-utama">
+      <div class="row g-0">
+        <div class="col-md-6">
+          <div class="card-body">
+            <h5 class="card-title">Selamat Datang di Website Resmi</h5>
+            <h5 class="card-main">LEMBAGA KESEJAHTERAAN SOSIAL KOTA YOGYAKARTA</h5>
+            <p class="card-text">
+              Lembaga Kesejahteraan Sosial (LKS) adalah organisasi sosial atau perkumpulan sosial melaksanakan penyelenggaraan kesejahteraan sosial yang dibentuk oleh masyarakat. <br />Tujuan pendirian LKS sebagai wujud peran masyarakat
+              dalam penyelenggaraan kesejahteraan sosial.
+            </p>
+            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <img src="image/image1.png" class="img-fluid rounded-start" alt="..." />
+        </div>
+      </div>
+    </div>
+    <h3>Profile LKS</h3>
+    <div class="container main-content mt-4">
+      <div class="row profile-lks">
+        <div class="col-md-4">
+          <div class="card profile-card">
+            <img src="image/image2.png" alt="Image 1" />
+            <div class="card-body">
+              <img src="https://img.icons8.com/ios-filled/50/000000/marker.png" alt="Location Icon"/>
+              <div class="card-title">Panti Wreda Hanna</div>
+              <div class="card-text">Surokarsan MG II/267, Wirogunan, Kec. Mergangsan, Yogyakarta. 55151</div>
+              <div class="contact">Kontak Pengurus: 085189568312</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card profile-card">
+            <img src="image/image3.png" alt="Image 2" />
+            <div class="card-body">
+              <img src="https://img.icons8.com/ios-filled/50/000000/marker.png" alt="Location Icon"/>
+              <div class="card-title">Panti Wreda Pandu</div>
+              <div class="card-text">JL. Ponggalaan, UH VII/203 Giwangan, Yogyakarta. 55163</div>
+              <div class="contact">Kontak Pengurus: 085189568312</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card profile-card">
+            <img src="image/image4.png" alt="Image 3" />
+            <div class="card-body">
+              <img src="https://img.icons8.com/ios-filled/50/000000/marker.png" alt="Location Icon"/>
+              <div class="card-title">Panti Wreda Mulya</div>
+              <div class="card-text">Jl. Urip Sumoharjo No.20, Klitren, Kec. Gondokusuman, Yogyakarta. 55222</div>
+              <div class="contact">Kontak Pengurus: 081209458322</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="notification-panel" id="notification-panel">
+      <div class="notification-header">
+        <h5>Notifikasi</h5>
+        <button class="btn-close" id="close-notification" aria-label="Close">&times;</button>
+      </div>
+      <div class="notification-content">
+        <div class="card">
+          <div class="d-flex align-items-center">
+            <img src="image/logo_kota.png" alt="Logo">
+            <div class="ms-3">
+              <div class="title">Login LKS</div>
+              <div class="date">Jumat, 21 Juni 2024 18:56:30</div>
+            </div>
+          </div>
+          <div class="content mt-2">
+            Hai [Panti Wreda "Hanna" Yogyakarta], izin operasional LKS Anda akan habis dalam satu bulan lagi. Mohon untuk memperpanjang izin operasional sebelum masa berlaku habis.
+          </div>
+        </div>
+        <div class="card">
+          <div class="d-flex align-items-center">
+            <img src="image/logo_kota.png" alt="Logo">
+            <div class="ms-3">
+              <div class="title">Login LKS</div>
+              <div class="date">Jumat, 21 Juni 2024 18:56:30</div>
+            </div>
+          </div>
+          <div class="content mt-2">
+            Hai [Panti Wreda "Hanna" Yogyakarta], izin operasional LKS Anda akan habis dalam satu bulan lagi. Mohon untuk memperpanjang izin operasional sebelum masa berlaku habis.
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="footer-content">
+        <div class="footer-item">
+          <div class="icon-wrapper">
+            <img src="https://img.icons8.com/ios-filled/50/000000/whatsapp.png" alt="Whatsapp Icon"/>
+          </div>
+          <div class="text">
+            <strong>Hubungi Kami</strong>
+            022-3456-990
+          </div>
+        </div>
+        <div class="footer-item">
+          <div class="icon-wrapper">
+            <img src="https://img.icons8.com/ios-filled/50/000000/marker.png" alt="Location Icon"/>
+          </div>
+          <div class="text">
+            <strong>Lokasi Kantor</strong>
+            Jl. Kenari No. 56 Yogyakarta
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script>
+      document.getElementById('notification-icon').addEventListener('click', function() {
+        document.getElementById('notification-panel').classList.toggle('show');
+      });
+
+      document.getElementById('close-notification').addEventListener('click', function() {
+        document.getElementById('notification-panel').classList.remove('show');
+      });
+    </script>
+  </body>
+</html>
